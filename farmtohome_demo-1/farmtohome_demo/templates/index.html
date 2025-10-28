@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h2>Fresh from farmers to your doorstep</h2>
+  <p>Local produce from Andhra Pradesh — support farmers and eat fresh.</p>
+</section>
+<section class="listings">
+  <h3>Available Listings</h3>
+  {% if listings %}
+    <div class="grid">
+    {% for l in listings %}
+      <div class="card">
+        {% if l.image %}
+          <img src="{{ url_for('static', filename='uploads/' ~ l.image) }}" alt="{{ l.title }}">
+        {% endif %}
+        <h4>{{ l.title }}</h4>
+        <p>Farmer: {{ l.farmer_name }}</p>
+        <p>Qty: {{ l.quantity }} • Price: {{ l.price }}</p>
+        <p><a href="{{ url_for('listing_detail', lid=l.id) }}">View</a></p>
+      </div>
+    {% endfor %}
+    </div>
+  {% else %}
+    <p>No listings yet. Farmers, please register and add your crops.</p>
+  {% endif %}
+</section>
+{% endblock %}

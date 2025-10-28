@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ listing.title }}</h2>
+<p>Farmer: {{ listing.farmer_name }} • Phone: {{ listing.farmer_phone }}</p>
+{% if listing.image %}
+  <img src="{{ url_for('static', filename='uploads/' ~ listing.image) }}" alt="">
+{% endif %}
+<p>Qty: {{ listing.quantity }} • Price: {{ listing.price }}</p>
+<p>{{ listing.description }}</p>
+<h3>Contact Farmer</h3>
+<form method="post" action="{{ url_for('contact') }}">
+  <input type="hidden" name="listing_id" value="{{ listing.id }}">
+  <label>Your name<input name="name" required></label>
+  <label>Your phone<input name="phone" required></label>
+  <label>Message<textarea name="message"></textarea></label>
+  <button type="submit">Send Message</button>
+</form>
+{% endblock %}

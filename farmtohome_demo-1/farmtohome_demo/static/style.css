@@ -1,0 +1,19 @@
+
+body { font-family: Arial, sans-serif; margin:0; background:#f4f7f2; color:#20322b;}
+.container{ max-width:980px; margin:0 auto; padding:16px;}
+.site-header{ background:linear-gradient(90deg,#2b7a3a,#6bbf59); color:white; padding:12px 0;}
+.site-header h1{ margin:0; display:inline-block; padding-left:8px;}
+.site-header nav{ float:right; padding-right:8px;}
+.site-header nav a{ color:white; margin-left:12px; text-decoration:none; font-weight:600;}
+.hero{ background: #e8f6e7; padding:18px; border-radius:8px; margin-top:12px;}
+.grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:12px;}
+.card{ background:white; padding:12px; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,0.08);}
+.card img{ max-width:100%; height:140px; object-fit:cover; border-radius:6px;}
+form label{ display:block; margin:8px 0;}
+input, textarea { width:100%; padding:8px; border:1px solid #cbd5c0; border-radius:4px;}
+button{ background:#2b7a3a; color:white; padding:8px 12px; border:none; border-radius:6px; cursor:pointer;}
+.flashes{ list-style:none; padding:0; }
+.flash{ padding:8px; border-radius:6px; margin:8px 0;}
+.flash.success{ background:#d1f5d0;}
+.flash.danger{ background:#f8d7da;}
+footer.site-footer{ margin-top:20px; padding:12px 0; text-align:center; color:#4a5a4d;}

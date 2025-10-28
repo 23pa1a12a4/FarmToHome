@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard — Welcome {{ session.farmer_name }}</h2>
+<p><a href="{{ url_for('listing_new') }}">Add New Listing</a></p>
+<h3>Your Listings</h3>
+{% if listings %}
+  <ul>
+  {% for l in listings %}
+    <li>{{ l.title }} — {{ l.quantity }} — {{ l.price }}</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>You have no listings yet.</p>
+{% endif %}
+{% endblock %}

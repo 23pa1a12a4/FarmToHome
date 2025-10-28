@@ -1,0 +1,1 @@
+This folder holds uploaded images. In the demo, you can upload images via the listing form.

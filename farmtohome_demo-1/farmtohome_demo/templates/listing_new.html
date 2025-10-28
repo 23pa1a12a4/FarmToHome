@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>New Listing</h2>
+<form method="post" enctype="multipart/form-data">
+  <label>Title<input name="title" required></label>
+  <label>Quantity<input name="quantity"></label>
+  <label>Price<input name="price"></label>
+  <label>Description<textarea name="description"></textarea></label>
+  <label>Image<input type="file" name="image"></label>
+  <button type="submit">Create Listing</button>
+</form>
+{% endblock %}

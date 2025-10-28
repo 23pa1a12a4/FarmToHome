@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Contacts (Admin)</h2>
+{% if contacts %}
+  <table>
+    <tr><th>When</th><th>Name</th><th>Phone</th><th>Message</th><th>Listing</th></tr>
+    {% for c in contacts %}
+    <tr>
+      <td>{{ c.created_at }}</td>
+      <td>{{ c.name }}</td>
+      <td>{{ c.phone }}</td>
+      <td>{{ c.message }}</td>
+      <td>{{ c.listing_title or "-" }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>No messages yet.</p>
+{% endif %}
+{% endblock %}
